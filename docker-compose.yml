@@ -6,10 +6,10 @@ services:
     volumes:
       - "db-data:/var/lib/mysql"
     environment:
-      MYSQL_ROOT_PASSWORD: wordpress
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: tegarsd5
+      MYSQL_DATABASE: dbss
+      MYSQL_USER: tegar
+      MYSQL_PASSWORD: tegarsd5
 
   wordpress:
     depends_on:
@@ -20,10 +20,10 @@ services:
     ports:
       - "80:80"
     environment:
-      DB_HOST: db
-      DB_PASSWORD: wordpress
-      DB_NAME: wordpress
-      DB_USER: wordpress
+      DB_HOST: localhost
+      DB_PASSWORD: tegarsd5
+      DB_NAME: dbss
+      DB_USER: tegar
       WORDPRESS_SITE_URL: http://localhost
       FS_METHOD: direct
       # For debugging only:
